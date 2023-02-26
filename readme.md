@@ -8,6 +8,14 @@ Mutation changes a hyperparameter slightly according to a certain probability di
 
 Crossover swaps the hyperparameters of two instances.
 
+For a hyperparameter whose range is 0 from 1, we have defined an original probability distribution. Its mode is the original value of the hyperparameter. Thu further it is from the mode, the smaller the density is.
+
+The fitness is the negative logloss of the cross validated out-of-folds. To make sure each cross validation generates the same result, all random seeds are fixed.
+
+# Usage
+
+Change parameters in `if __name__ == '__main__'` in `HyperParamTuner.py` and execute it.
+
 # License
 
 MIT
